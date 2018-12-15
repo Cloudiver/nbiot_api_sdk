@@ -3,10 +3,7 @@ package cmcciot.onenet.nbapi.sdk.config;
 import cmcciot.onenet.nbapi.sdk.exception.NBStatus;
 import cmcciot.onenet.nbapi.sdk.exception.OnenetNBException;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 /**

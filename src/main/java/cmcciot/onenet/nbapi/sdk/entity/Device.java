@@ -11,6 +11,12 @@ import java.util.List;
  * Created by zhuocongbin
  * date 2018/3/16
  */
+
+/**
+ * 创建新设备
+ * @author Administrator
+ *
+ */
 public class Device extends CommonEntity{
     // 设备名称，字符和数字组成的字符串，必填参数
     private String title;

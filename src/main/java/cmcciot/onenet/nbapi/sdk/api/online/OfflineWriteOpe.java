@@ -1,21 +1,23 @@
 package cmcciot.onenet.nbapi.sdk.api.online;
 
+import org.json.JSONObject;
+
 import cmcciot.onenet.nbapi.sdk.entity.CommonEntity;
 import cmcciot.onenet.nbapi.sdk.utils.HttpSendCenter;
 import okhttp3.Callback;
-import org.json.JSONObject;
 
 /**
- * Created by zhuocongbin
- * date 2018/3/15
- * apiKey: the product of api-key which can be found on OneNET
- */
-public class WriteOpe extends BasicOpe{
+* @author: fan
+* @date: 2018年12月15日 下午12:19:17
+* @summary: 缓存命令-写设备资源
+*/
+public class OfflineWriteOpe extends BasicOpe {
 
-    public WriteOpe(String apiKey) {
-        super(apiKey);
-    }
-    @Override
+	public OfflineWriteOpe(String apiKey) {
+		super(apiKey);
+	}
+
+	@Override
     public JSONObject operation(CommonEntity commonEntity, JSONObject body) {
         return HttpSendCenter.post(apiKey, commonEntity.toUrl(), body);
     }

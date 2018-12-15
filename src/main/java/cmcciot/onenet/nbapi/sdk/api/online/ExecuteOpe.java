@@ -1,7 +1,6 @@
 package cmcciot.onenet.nbapi.sdk.api.online;
 
 import cmcciot.onenet.nbapi.sdk.entity.CommonEntity;
-import cmcciot.onenet.nbapi.sdk.entity.Execute;
 import cmcciot.onenet.nbapi.sdk.utils.HttpSendCenter;
 import okhttp3.Callback;
 import org.json.JSONObject;

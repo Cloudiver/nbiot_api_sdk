@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+
 /**
  * Created by zhuocongbin
  * date 2018/3/15
@@ -73,10 +74,15 @@ public final class HttpSendCenter {
                 .build();
         handleAsyncRequest(request, callback);
     }
-
+    
+    /**新增PUT方法**/
     public static JSONObject put(String apiKey, String url) {
-
-        return null;
+    	Request request = new Request.Builder()
+    			.url(url)
+    			.header("api-key", apiKey)
+    			.put(RequestBody.create(JSON, new JSONObject().toString()))
+    			.build();
+    	return handleRequest(request);
     }
 
     public static void putAsync(String apiKey, String url, JSONObject body, Callback callback) {
@@ -84,9 +90,14 @@ public final class HttpSendCenter {
 
     }
 
+    /**新增delete方法**/
     public static JSONObject delete(String apiKey, String url) {
-
-        return null;
+    	Request request = new Request.Builder()
+                .url(url)
+                .header("api-key", apiKey)
+                .delete(RequestBody.create(JSON, new JSONObject().toString()))
+                .build();
+        return handleRequest(request);
     }
 
     public static void deleteAsync(String apiKey, String url, Callback callback) {
